@@ -1,2 +1,12 @@
 hosts: capg
 become: true
+
+tasks:
+  - name: télécharger remi repo rpm
+    get_url: 
+      url: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+      dest: /root/
+  - name: installer 
+  - name: installation des packages
+    yum:
+      - name: [httpd, ]
